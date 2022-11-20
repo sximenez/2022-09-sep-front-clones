@@ -1298,6 +1298,10 @@ button:focus {
   width: 70%;
 }
 
+.w-75 {
+  width: 75%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1696,6 +1700,10 @@ button:focus {
 }
 
 .text-transparent	{
+  color: transparent;
+}
+
+.hover\:text-transparent:hover	{
   color: transparent;
 }
 
@@ -8037,6 +8045,10 @@ button:focus {
   opacity: 0.5;
 }
 
+.hover\:opacity-50:hover	{
+  opacity: 0.5;
+}
+
 .opacity-60	{
   opacity: 0.6;
 }
@@ -8130,6 +8142,10 @@ button:focus {
   transform:translateZ(20px);
 }
 
+.hover\:grow-x-large:hover {
+  font-size: x-large;
+}
+
 .hover\:grow-40px:hover {
   font-size: 40px;
 }
@@ -8175,6 +8191,12 @@ button:focus {
   background-image: url(/TEMPLATING/IMAGES/photos/pexels-hazy-mokhlas-47480.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.special-text:hover:after {
+  content:'Just kidding';
+  color: black;
+  opacity: 0.2;
 }
 
 @media (min-width: 1024px) {
