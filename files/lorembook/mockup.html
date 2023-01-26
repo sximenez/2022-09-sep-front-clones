@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>lorembook: Mockup</title>
+  <style>
+    .guide {
+      border: 1px solid red;
+    }
+
+    .divider {
+      border: 1px solid gray;
+    }
+
+    .zone-1 {
+      background-color: rgb(254 242 242);
+    }
+
+    .zone-2 {
+      background-color: rgb(254 226 226);
+    }
+
+    .zone-3 {
+      background-color: rgb(254 202 202);
+    }
+
+    #view {
+      height: calc(100vh);
+    }
+
+    .link-btn {
+      background-color: #F0F0F0;
+      width: 100px;
+      padding: 10px 15px;
+      margin: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    @media (max-width: 375px) {
+
+      .link-btn {
+
+        font-size: 10px;
+        margin: 0;
+
+      }
+
+    }
+
+    .link-btn:hover {
+      background-color: lightgray;
+    }
+
+    #footer {
+      height: calc(100vh - 720px);
+    }
+  </style>
+</head>
+
+<body class="min-w-[275px]">
+
+  <!-- Project links -->
+  <div id="links" class="flex flex-wrap gap-x-2 items-center justify-center p-2">
+    <a href="zoning.html" class="link-btn shadow">Zoning</a>
+    <a href="#" class="link-btn shadow">Wireframe</a>
+    <a href="mockup.html" class="link-btn shadow">Mockup</a>
+  </div>
+
+  <!-- Rendered page -->
+  <div id="view" class="h-screen flex flex-col">
+
+    <div class="h-[720px] flex items-center justify-center bg-[#f0f2f5]">
+      <div class="flex justify-center w-[980px]">
+
+        <!-- Main text -->
+        <div class="w-3/5 pr-36">
+          <h1 class="text-[#1877F2] text-6xl font-bold pt-[40px] pb-[16px]">lorembook</h1>
+          <p class="text-3xl">Tincidunt quam erat eleifend, nullam molestie.</p>
+        </div>
+
+        <!-- Sign in -->
+        <div class="w-2/5 flex flex-col">
+          <div class="w-[396px] rounded-[6px] bg-white drop-shadow-xl">
+
+            <form action="#" class="flex flex-col p-[14px]">
+
+              <input
+                class="w-full py-[14px] my-[6px] border-[1px] border-[#ccd0d5] rounded-[6px] placeholder:pl-4 placeholder:text-lg"
+                type="text" placeholder="Ad tempor nisl phasellus">
+
+              <input
+                class="w-full py-[14px] my-[6px] border-[1px] border-[#ccd0d5] rounded-[6px] placeholder:pl-4 placeholder:text-lg"
+                type="password" placeholder="Fermentum">
+
+              <button type="submit"
+                class="bg-[#1877f2] text-xl w-full py-[12px] my-[6px] rounded-[6px] text-white font-semibold hover:bg-[#0D6CE7] transition-all">Lorem
+                Ipsum</button>
+
+              <a href="#" class="text-[#1877f2] text-center mt-[6px] hover:underline">Nec hendrerit?</a>
+
+              <div class="border-b-[1px] border-[#dadde1] my-[20px]"></div>
+
+              <div class="flex items-center justify-center">
+                <button type="submit"
+                  class="bg-[#42b72a] hover:bg-[#3BA626] transition-all text-lg w-fit py-[12px] px-[16px] my-[6px] rounded-[6px] text-white font-semibold">
+                  Justo morbi ut</button>
+              </div>
+
+            </form>
+
+          </div>
+
+          <p class="my-[28px] text-sm text-center"><a class="font-bold hover:underline" href="">Blandit aptent</a> morbi
+            massa ad rhoncus lorem.</p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="footer" class="w-[980px] flex flex-col mx-auto items-start justify-center bg-white text-sm text-[#737373]">
+
+      <ul class="flex gap-x-8 cursor-pointer">
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+      </ul>
+
+      <div class="w-full border-b-[1px] border-[#dadde1] my-[20px]"></div>
+
+      <ul class="flex flex-wrap gap-x-8 cursor-pointer">
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+        <li>link</li>
+      </ul>
+
+      <p class="mt-[20px]">Lorem &copy;2022</p>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

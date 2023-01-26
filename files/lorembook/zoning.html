@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>lorembook: Zoning</title>
+  <style>
+    .guide {
+      border: 1px solid red;
+    }
+
+    .divider {
+      border: 1px solid gray;
+    }
+
+    .zone-1 {
+      background-color: rgb(254 242 242);
+    }
+
+    .zone-2 {
+      background-color: rgb(254 226 226);
+    }
+
+    .zone-3 {
+      background-color: rgb(254 202 202);
+    }
+
+    #view {
+      height: calc(100vh);
+    }
+
+    .link-btn {
+      background-color: #F0F0F0;
+      width: 100px;
+      padding: 10px 15px;
+      margin: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    @media (max-width: 375px) {
+
+      .link-btn {
+
+        font-size: 10px;
+        margin: 0;
+
+      }
+
+    }
+
+    .link-btn:hover {
+      background-color: lightgray;
+    }
+
+    #footer {
+      height: calc(100vh - 720px);
+    }
+  </style>
+</head>
+
+<body class="min-w-[275px]">
+
+  <!-- Project links -->
+  <div id="links" class="flex flex-wrap gap-x-2 items-center justify-center p-2">
+    <a href="zoning.html" class="link-btn shadow">Zoning</a>
+    <a href="#" class="link-btn shadow">Wireframe</a>
+    <a href="mockup.html" class="link-btn shadow">Mockup</a>
+  </div>
+
+  <!-- Rendered page -->
+  <div id="view" class="h-screen flex flex-col">
+
+    <div class="h-[720px] w-full flex items-center justify-center zone-1">
+      <p>main</p>
+    </div>
+
+    <div id="footer" class="flex items-center justify-center zone-2">
+      <p>footer</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

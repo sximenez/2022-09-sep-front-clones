@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>youIpsum: Zoning</title>
+  <style>
+    .guide {
+      border: 1px solid red;
+    }
+
+    .divider {
+      border: 1px solid gray;
+    }
+
+    .zone-1 {
+      border: 1px solid blue;
+    }
+
+    .zone-2 {
+      border: 1px solid red;
+    }
+
+    .zone-3 {
+      border: 1px solid green;
+    }
+
+    .zone-4 {
+      border: 1px solid orange;
+    }
+
+    .zone-5 {
+      border: 1px solid purple;
+    }
+
+    #view {
+      height: calc(100vh - 56px);
+    }
+
+    .link-btn {
+      background-color: #F0F0F0;
+      width: 100px;
+      padding: 10px 15px;
+      margin: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    @media (max-width: 375px) {
+
+      .link-btn {
+
+        font-size: 10px;
+        margin: 0;
+
+      }
+
+    }
+
+    .link-btn:hover {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+
+<body class="min-w-[275px]">
+
+  <!-- Project links -->
+  <div id="links" class="flex flex-wrap gap-x-2 items-center justify-center p-2">
+    <a href="zoning.html" class="link-btn shadow">Zoning</a>
+    <a href="wireframe.html" class="link-btn shadow">Wireframe</a>
+    <a href="mockup.html" class="link-btn shadow">Mockup</a>
+  </div>
+
+  <!-- Rendered page -->
+  <div id="view">
+
+    <!-- Nav bar -->
+    <header>
+      <nav class="h-[56px] flex items-center justify-center zone-1">
+        <p>&#60;nav&#62;</p>
+      </nav>
+    </header>
+
+    <div id="container" class="h-full flex">
+
+      <!-- Aside bar, hidden on mobile -->
+      <aside class="hidden md:block w-[64px] 2xl:w-[224px] md:flex items-center justify-center zone-2">
+        <p>&#60;aside&#62;</p>
+      </aside>
+
+      <!-- Main app -->
+      <div id="app" class="flex grow items-center justify-center overflow-y-scroll zone-3">
+        <p>&#60;main&#62;</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

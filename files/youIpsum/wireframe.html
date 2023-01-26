@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>youIpsum: Wireframe</title>
+  <style>
+    .guide {
+      border: 1px solid red;
+    }
+
+    .divider {
+      border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .zone-1 {
+      border: 1px solid blue;
+    }
+
+    .zone-2 {
+      border: 1px solid red;
+    }
+
+    .zone-3 {
+      border: 1px solid green;
+    }
+
+    .zone-4 {
+      border: 1px solid orange;
+    }
+
+    .zone-5 {
+      border: 1px solid purple;
+    }
+
+    #view {
+      height: calc(100vh - 56px);
+    }
+
+    .link-btn {
+      background-color: #F0F0F0;
+      width: 100px;
+      padding: 10px 15px;
+      margin: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    @media (max-width: 375px) {
+
+      .link-btn {
+
+        font-size: 10px;
+        margin: 0;
+
+      }
+
+    }
+
+    .link-btn:hover {
+      background-color: lightgray;
+    }
+
+    .gutter {
+      padding: 0 1.5rem;
+    }
+
+    /* Scrollbars */
+
+    .visible-scrollbar,
+    .invisible-scrollbar,
+    .mostly-customized-scrollbar {
+      display: block;
+      width: 10em;
+      overflow: auto;
+      height: 2em;
+    }
+
+    .invisible-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    #tagbar::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: #aaa;
+    }
+
+    /* Add a thumb */
+    #tagbar::-webkit-scrollbar-thumb {
+      background: #000;
+    }
+
+    /* Card renderer */
+
+    .card-items-per-row {
+      --items-per-row: 1;
+    }
+
+    .short-items-per-row {
+      --items-per-row: 2;
+    }
+
+    @media (min-width: 600px) {
+      .card-items-per-row {
+        --items-per-row: 2;
+      }
+
+      .short-items-per-row {
+        --items-per-row: 3;
+      }
+    }
+
+    @media (min-width: 835px) {
+      .card-items-per-row {
+        --items-per-row: 3;
+      }
+
+      .short-items-per-row {
+        --items-per-row: 6;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .card-items-per-row {
+        --items-per-row: 4;
+      }
+
+      .short-items-per-row {
+        --items-per-row: 8;
+      }
+    }
+
+    @media (min-width: 2000px) {
+      .card-items-per-row {
+        --items-per-row: 5;
+      }
+
+      .short-items-per-row {
+        --items-per-row: 10;
+      }
+    }
+
+    @media (min-width: 2560px) {
+      .card-items-per-row {
+        --items-per-row: 6;
+      }
+
+      .short-items-per-row {
+        --items-per-row: 12;
+      }
+    }
+
+    .card-width {
+      width: calc(100% - 16px);
+    }
+
+    .card-columns-per-row {
+      grid-template-columns: repeat(var(--items-per-row), minmax(0, 1fr));
+    }
+
+    .short-columns-per-row {
+      grid-template-columns: repeat(var(--items-per-row), minmax(0, 1fr));
+    }
+
+    .grid-max-row {
+      grid-auto-rows: 0px;
+    }
+
+    .flip {
+      transform: rotateX(180deg);
+    }
+  </style>
+</head>
+
+<body class="min-w-[275px]">
+
+  <!-- Project links -->
+  <div id="links" class="flex flex-wrap gap-x-2 items-center justify-center p-2">
+    <a href="zoning.html" class="link-btn shadow">Zoning</a>
+    <a href="wireframe.html" class="link-btn shadow">Wireframe</a>
+    <a href="mockup.html" class="link-btn shadow">Mockup</a>
+  </div>
+
+  <!-- Rendered page -->
+  <div id="view">
+
+    <!-- Nav bar -->
+    <header>
+      <nav class="h-[56px] flex items-center justify-between px-6 zone-1">
+        <p>logo</p>
+        <ul class="flex gap-x-8">
+          <li>icon</li>
+          <li>icon</li>
+          <li>icon</li>
+          <li>user</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="container" class="h-full flex">
+
+      <!-- Aside bar, hidden on mobile -->
+      <aside
+        class="hidden md:block w-[92px] 2xl:w-[340px] md:flex items-center justify-center zone-2 overflow-y-scroll">
+        <p>&#60;aside&#62;</p>
+      </aside>
+
+      <!-- Main app -->
+      <div id="app" class="flex flex-col grow items-center justify-start overflow-y-scroll zone-3">
+
+        <!-- Tag bar -->
+        <div class="h-[56px] w-full flex items-center zone-2 px-8 flip">
+          <ul id="tagbar" class="h-[56px] flex items-center gap-x-24 overflow-x-scroll">
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+            <li class="flip">tag</li>
+          </ul>
+        </div>
+
+        <!-- Video cards -->
+        <div class="max-w-[2560px] w-full px-16">
+          <div class="h-[680px] overflow-y-hidden grid card-columns-per-row card-items-per-row">
+
+            <!-- Card -->
+            <div class="h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="hidden xl:block h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="hidden xl:block h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="hidden xl:block h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="hidden xl:block h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="hidden xl:block h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="hidden xl:block h-[300px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[200px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[100px] w-full flex zone-1">
+                <div class="w-[36px] mt-[12px] mr-[12px]">avatar</div>
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>user</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Shorts -->
+        <div class="max-w-[2560px] w-full px-16">
+
+          <div class="border-t border-t-[2px] mx-[8px] border-black"></div>
+
+          <div class="h-[40px] my-[24px] mx-[8px] flex justify-between">
+            <h2>title</h2>
+            <p>button</p>
+          </div>
+
+          <div class="h-[390px] overflow-y-hidden grid short-columns-per-row short-items-per-row overflow-y-hidden">
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="h-[350px] card-width flex flex-col mx-2 mb-10 zone-1">
+              <div class="h-[270px] w-full rounded-[12px] zone-4"></div>
+              <div class="h-[80px] w-full flex zone-1">
+                <div class="w-full flex flex-col pr-[24px]">
+                  <p class="mt-[12px] mb-[4px]">title</p>
+                  <p>data</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
