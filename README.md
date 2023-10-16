@@ -2,7 +2,7 @@
 
 This repo centralizes personal front cloning projects for portfolio purposes, training and to record my progress.
 
-[Live demo](https://sximenez.github.io/frontCloning/)
+[Live demo](https://sximenez.github.io/2022-09-sep-front-clones/)
 
 ## Libraries
 
